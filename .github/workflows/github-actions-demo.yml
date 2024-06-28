@@ -39,6 +39,6 @@ jobs:
       API_SECRET: ${{secrets.API_SECRET}}
     steps:
       - name: read a variable
-        run: echo "env  $HELLO_WORLD ${{vars.HELLO_WORLD}}"
+        run: echo "env $HELLO_WORLD ${{vars.HELLO_WORLD}}"
       - name: read secret
-        run: echo "env  $API_SECRET ${{secrets.API_SECRET}}"
+        run: echo "env $API_SECRET ${{secrets.API_SECRET}}"
