@@ -5,7 +5,7 @@ const port = 8080;
 
 app.get('/', (req, res) => {
   res.send(
-    `Hello Kingsley! build with git action ${process.env.HELLO_WORLD} ${prcess.env.API_KEY}`
+    `Hello Kingsley! build with git action ${process.env.HELLO_WORLD} ${process.env.API_SECRET}`
   );
 });
 
