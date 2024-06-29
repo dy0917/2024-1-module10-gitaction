@@ -20,6 +20,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: 'Create env file'
         run: |
+          if test -f .env; then
+            rm .env
+          else
+            echo "file not exist"
+          fi
           touch .env
           echo HELLO_WORLD=${{vars.HELLO_WORLD}} >> .env
           echo API_SECRET=${{ secrets.API_SECRET }} >> .env
